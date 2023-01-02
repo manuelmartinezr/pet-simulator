@@ -1,6 +1,7 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod, ABC
+from observer import Observer
 from event_type import eventType
-class Pet(ABC):
+class Pet(Observer, ABC):
     def __init__(self, name) -> None:
         self._name = name
     
